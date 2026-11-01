@@ -1,0 +1,94 @@
+{
+  "validation_seeds": [
+    100,
+    111
+  ],
+  "all_choices": [
+    {
+      "q": 0.0,
+      "reset_threshold": 1.3,
+      "mse": 0.080903392883363,
+      "resets": 1.0
+    },
+    {
+      "q": 0.0,
+      "reset_threshold": 1.7,
+      "mse": 0.080903392883363,
+      "resets": 1.0
+    },
+    {
+      "q": 0.0,
+      "reset_threshold": 2.2,
+      "mse": 0.080903392883363,
+      "resets": 1.0
+    },
+    {
+      "q": 0.001,
+      "reset_threshold": 1.3,
+      "mse": 0.0809428364183107,
+      "resets": 1.0
+    },
+    {
+      "q": 0.001,
+      "reset_threshold": 1.7,
+      "mse": 0.0809428364183107,
+      "resets": 1.0
+    },
+    {
+      "q": 0.001,
+      "reset_threshold": 2.2,
+      "mse": 0.0809428364183107,
+      "resets": 1.0
+    },
+    {
+      "q": 0.005,
+      "reset_threshold": 1.3,
+      "mse": 0.08159737238776342,
+      "resets": 1.0
+    },
+    {
+      "q": 0.005,
+      "reset_threshold": 1.7,
+      "mse": 0.08159737238776342,
+      "resets": 1.0
+    },
+    {
+      "q": 0.005,
+      "reset_threshold": 2.2,
+      "mse": 0.08159737238776342,
+      "resets": 1.0
+    },
+    {
+      "q": 0.02,
+      "reset_threshold": 1.3,
+      "mse": 0.08677802772384563,
+      "resets": 1.0
+    },
+    {
+      "q": 0.02,
+      "reset_threshold": 1.7,
+      "mse": 0.08677802772384563,
+      "resets": 1.0
+    },
+    {
+      "q": 0.02,
+      "reset_threshold": 2.2,
+      "mse": 0.08677802772384563,
+      "resets": 1.0
+    }
+  ],
+  "chosen_phase": {
+    "q": 0.0,
+    "reset_threshold": 1.3,
+    "mse": 0.080903392883363,
+    "resets": 1.0
+  },
+  "chosen_ema": {
+    "alpha": 0.3,
+    "mse": 0.09522008687740631
+  },
+  "chosen_spatial": {
+    "blur": 0.6,
+    "mse": 0.19681390062266166
+  }
+}

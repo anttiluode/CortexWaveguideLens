@@ -86,3 +86,17 @@ See [results/README.md](results/README.md) for numbers and limitations. `results
 - For the neural analogy, local apical modulation and dendritic nonlinearity motivate **computational hypotheses**; they do not license treating passive cables as lossless traveling-wave guides.
 
 MIT license.
+
+## Stage 2 — phase-propagated visual memory (November 1, 2026)
+
+A second, **independent** experiment follows Gemini's proposed temporal "signal copy" and Astra's requirement to test both persistence and correction. A 48×48 synthetic visual scene moves behind occluders; a new scene replaces it partway through. `temporal_wavecopy.py` implements explicit Fourier translation of a remembered frame, observed-pixel uncertainty updates, and a causal reset alarm. It additionally estimates global velocity from the first two raw noisy frames. This is not a learned transition or biological waveguide; a sufficiently informed conventional filter can implement the same computation.
+
+**Result:** on 80 held-out moving/replacement sequences, the no-memory raw MSE was 0.3819, the recurrent phase-copy MSE 0.0816, and the unrestarted phase-copy MSE 0.5123. The phase-copy and **classical motion-aligned running average with matched causal resets** both achieve **0.0816**. The interesting finding is that aligned history matters, and stale memory is harmful. It is not evidence for novel wave physics or a superior denoising algorithm. See [the stage-2 experimental ledger](results/TEMPORAL_STAGE2.md) for full baselines, validation/test splits, and noise sensitivity.
+
+```bash
+python -m pip install -r requirements.txt
+python -m unittest discover -s tests -v
+python temporal_wavecopy.py --count 80 --q 0 --reset-threshold 1.3 --alpha .30 --blur .6 --output results/temporal_main
+```
+
+**Next:** learn a sparse local cross-frequency transition and test motion/deformation not hard-coded in its propagation, against classical alignment and comparable recurrent baselines. A label of "apical" or "waveguide" cannot substitute for that causal comparison.
